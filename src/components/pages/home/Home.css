@@ -1,0 +1,147 @@
+.poster {
+    justify-content: center;
+    display: flex;
+    margin: 0 4%;
+}
+
+.banner {
+    width: 75%;
+    margin-right: 20px;
+}
+
+/* .banner:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+} */
+
+.upnextLargeScreen {
+    width: 25%;
+    display: grid;
+    align-items: center;
+    background-color: #09090b;
+}
+
+.upnextSmallScreen {
+    width: 25%;
+    background-color: #09090b;
+    display: none;
+}
+
+.posterImage>img {
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+.posterImage__overlay {
+    position: absolute;
+    padding: 4px 5rem;
+    bottom: 0px;
+    /* height: 70%; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.posterImage__overlay:hover {
+    opacity: 1;
+}
+
+.posterImage__title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 0.4rem;
+    text-align: left;
+}
+
+.posterImage__runtime {
+    display: flex;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.posterImage__rating {
+    display: flex;
+    margin-left: 3rem;
+}
+
+.posterImage__description {
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    display: flex;
+    text-align: left;
+}
+
+.logo {
+    width: 150px;
+    border-radius: 5px;
+}
+
+@media (max-width: 1024px) {
+    .upnextLargeScreen {
+        display: none;
+    }
+
+    .upnextSmallScreen {
+        display: grid;
+        align-items: center;
+    }
+
+    .posterImage__title {
+        font-size: 2rem;
+    }
+
+    .posterImage__runtime {
+        font-size: 1rem;
+    }
+
+    .posterImage__description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    .upnextSmallScreen {
+        display: none;
+    }
+
+    .posterImage__title {
+        font-size: 1.5rem;
+    }
+
+    .posterImage__runtime {
+        font-size: 14px;
+    }
+
+    .posterImage__description {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .posterImage__title {
+        font-size: 14px;
+    }
+
+    .posterImage__runtime {
+        font-size: 10px;
+    }
+
+    .posterImage__description {
+        display: none
+    }
+
+    .logo {
+        width: 110px;
+    }
+}
